@@ -1,4 +1,4 @@
-# Unified-customer-oriented-localized-Enterprise-Network-Management-Platform-Base-on-Cisco-DNA-Solution Demo Code
+# Unified customer oriented localized Enterprise Network Management Platform Base on Cisco DNA Solution Demo Code
 Technology Summary :
 
 1.Unified &amp; Customer-oriented &amp; localized Enterprise  Network Management Platform Base on Cisco DNA Solution,Monitor network every where，any time,and provide automaticly report  
