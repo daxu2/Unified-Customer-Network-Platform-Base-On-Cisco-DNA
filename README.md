@@ -13,13 +13,16 @@ Other things you might include:
 
     Technology stack: This Example Code is composed with 4 moduel,every moduel is can be used independently.   
     1.DNAC-intergrate-Huawei5720.zip :--- This is Sample code for using DNAC southbound SDK to intergarte Huawei S5720 Switch in to DNAC platform,you must install DNAC southbound SDK tools first,then unzip file and load all file into SDK application and compile it,and install the .sdu file in to you DNAC.
-    ![DNAC Southbound SDK](https://github.com/daxu2/Unified-Customer-Network-Platform-Base-On-Cisco-DNA/blob/master/ScreenShots/1.png)
     2.assurnace_haixin.py :--- This is a Saple code using Python,this code is get data from DNAC and can be display on Splunk,you can using follow command to run the code python3 assurnace_haixin.py -u admin -p Cisc0123 -i 172.16.63.248 -t 1 -c 1, 'admin is DNAC username,'Cisc0123' is DNAC password,'172.16.63.248' is DNAC IP address, -t is mean how many minute to get data from dnac once,'-c' is mean how many time you want to retrieve data from DNAC,if =0 mean,this will run for ever.
     3.dnabot_xuda.js :--- this is Demo code for using Webex Team Bot to intergrate with DNAC,you can using /hello，/getdevicecount，/getsiteinfo,  /testmyclient command on you webex Team Bot to get the infomation from DNAC,this code is using JS.Node,you also need to install ngrok and npm first.
     4.WeChat_Dev.zip :--- This is Demo for How intergrate DNAC request in Wechat, you should install Wechat develop Tools first and using this tool to compile the code and publish in WeChat.
     Status:  Beta. It's OK to write a sentence, too. The goal is to let interested people know where what they can expect from this code.
     Screenshot: If the code has visual components, place a screenshot after the description; e.g.,
 
+![DNAC Southbound SDK](https://github.com/daxu2/Unified-Customer-Network-Platform-Base-On-Cisco-DNA/blob/main/images/DNAC_southbound_SDK.png)
+![DNAC Nouthbound API](https://github.com/daxu2/Unified-Customer-Network-Platform-Base-On-Cisco-DNA/blob/main/images/PyCharm_for_DNA_northbound_API.png)
+![DNAC WebexTeam_Bot SDK](https://github.com/daxu2/Unified-Customer-Network-Platform-Base-On-Cisco-DNA/blob/main/images/webex_team_bot.png)
+![DNAC Wechat SDK](https://github.com/daxu2/Unified-Customer-Network-Platform-Base-On-Cisco-DNA/blob/main/images/wechat_develop.png)
 
 # Use Case Description
 Describe the problem this code addresses, how your code solves the problem, challenges you had to overcome as part of the solution, and optional ideas you have in mind that could further extend your solution.
