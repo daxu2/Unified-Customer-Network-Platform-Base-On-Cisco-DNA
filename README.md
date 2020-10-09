@@ -28,18 +28,27 @@ Other things you might include:
 Technology Summary :
 
 1.Unified &amp; Customer-oriented &amp; localized Enterprise  Network Management Platform Base on Cisco DNA Solution,Monitor network every where，any time,and provide automaticly report  
+
 2.3rd party switch integrate 
+
 3.Customer-oriented Protal,not only IT view,but also need OT and Management Team view  
+
 4.Notification and Integrate With WeChat and Webex Team,Real time notification Integrating customer workflow 
+
 5.Self Service Integrate With WeChat and customer mobile app,Provide more self-service  for OT within workflow ,more automatic,more flexible IT Operation 
+
 6.DNA Assurance Portal Localization
 
 Business Summary:
 
 1.Win &amp; Win &amp; Win:Cisco Win the Case,Partner Wim more Project,Customer IT win Trust from Management Team 
-2.This is not only an Idea,it is real case/product, Total Booking Number：1M+ US$ 
+
+2.This is not only an Idea,it is real case/product
+
 3.Cisco Value Selling:Cross Archi Selling,From IT to OT,Focus on customer business value and solve really issue 
+
 4.Partner Tranformation:From product selling to solution selling,More closely with customer core business,Partner develop skill Use case description  
+
 
 # Topology For This Test
 
@@ -50,31 +59,51 @@ You need to prepare 1 DNAC Server, 1 Catalyst Switch,1 Huawei 5720S Swtich,1 Ser
   This Example Code is composed with 4 moduel,every moduel is can be used independently. you can choose some module which you want to demo.
   
 Module 1:DNAC-intergrate-Huawei5720 Swtich:
+
   1)Download DNAC SDK from https://developer.cisco.com/docs/dna-center/#!downloads-and-release-notes
+  
   2)Install SDK on you develop PC
+  
   3)Download DNAC-intergrate-Huawei5720.zip on you develop PC and open with DNAC SDK
+  
   4)Complie the code on DNAC SDK 
+  
   5)Deploy the SDU file to you DNAC Center
 
 Module 2:assurnace_haixin.py :
+
   1) install Python3 on Application Server
+  
   2) Copy assurnace_haixin.py to Application Server folder
+  
   3) under same folder,you need to create clientdata and devicedata floder
+  
   4) sudo pip3 install requests
+  
   5）run the code python3 assurnace_haixin.py -u admin -p Cisc0123 -i 172.16.63.248 -t 1 -c 1, 'admin is DNAC username,'Cisc0123' is DNAC password,'172.16.63.248' is DNAC IP address, -t is mean how many minute to get data from dnac once,'-c' is mean how many time you want to retrieve data from DNAC,if =0 mean,this will run for ever.
 
 Module 3:dnabot_xuda.js :
+
   1）install npm on Application Server
+  
   2）npm i request on Application Server
+  
   3）copy dnabot_xuda.js to Application Server folder
+  
   4）create bot named "DNA Demo Bot" on https://developer.webex.com/my-apps,get token from https://developer.webex.com/my-apps/dna-demo-bot
+  
   5) run NodeJS using command='DEBUG=sparkbot*,samples* ACCESS_TOKEN=ZWI0Y2YwYTMtMzgzYS00OTMxLWEwN2EtYjI4MmUxODAzOTQ1ZDFlOTI3MzItYThl_PF84_1eb65fdf-9643-417f-9974-ad72cae0e10f node examples/dnabot_xuda.js'
-  6) you can using /hello，/getdevicecount，/getsiteinfo,  /testmyclient command on you webex Team Bot to get the infomation from DNAC,
+  
+  6) you can using /hello，/getdevicecount，/getsiteinfo,  /testmyclient command on you webex Team Bot to get the infomation from DNAC.
 
 Module 4:WeChat_Dev.zip :
+
   1) Download and Install Wechat SDk in you develop PC
+  
   2) Download WeChat_Dev.zip and open with Wechat SDK
+  
   3) Compile Code and run
+  
   4) publish the App in WeChat.
 
 
