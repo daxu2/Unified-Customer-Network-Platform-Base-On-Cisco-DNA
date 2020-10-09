@@ -41,48 +41,43 @@ Business Summary:
 3.Cisco Value Selling:Cross Archi Selling,From IT to OT,Focus on customer business value and solve really issue 
 4.Partner Tranformation:From product selling to solution selling,More closely with customer core business,Partner develop skill Use case description  
 
-# Topology For this Test
+# Topology For This Test
 
 You need to prepare 1 DNAC Server, 1 Catalyst Switch,1 Huawei 5720S Swtich,1 Server for install code and develop environment，you also need to can access internet becasue you will intergrate Webext Team and Wechat Cloud Service.
 ![Test Topology](https://github.com/daxu2/Unified-Customer-Network-Platform-Base-On-Cisco-DNA/blob/main/images/Demo_Topology.jpg)
 
-# Installation
+# Installation & Configuration
+  This Example Code is composed with 4 moduel,every moduel is can be used independently. you can choose some module which you want to demo.
+  
+Module 1:DNAC-intergrate-Huawei5720 Swtich:
+  1)Download DNAC SDK from https://developer.cisco.com/docs/dna-center/#!downloads-and-release-notes
+  2)Install SDK on you develop PC
+  3)Download DNAC-intergrate-Huawei5720.zip on you develop PC and open with DNAC SDK
+  4)Complie the code on DNAC SDK 
+  5)Deploy the SDU file to you DNAC Center
 
-Detailed instructions on how to install, configure, and get the project running. Call out any dependencies. This should be frequently tested and updated to make sure it works reliably, accounts for updated versions of dependencies, etc.
+Module 2:assurnace_haixin.py :
+  1) install Python3 on Application Server
+  2) Copy assurnace_haixin.py to Application Server folder
+  3) under same folder,you need to create clientdata and devicedata floder
+  4) sudo pip3 install requests
+  5）run the code python3 assurnace_haixin.py -u admin -p Cisc0123 -i 172.16.63.248 -t 1 -c 1, 'admin is DNAC username,'Cisc0123' is DNAC password,'172.16.63.248' is DNAC IP address, -t is mean how many minute to get data from dnac once,'-c' is mean how many time you want to retrieve data from DNAC,if =0 mean,this will run for ever.
 
-# Configuration
+Module 3:dnabot_xuda.js :
+  1）install npm on Application Server
+  2）npm i request on Application Server
+  3）copy dnabot_xuda.js to Application Server folder
+  4）create bot named "DNA Demo Bot" on https://developer.webex.com/my-apps,get token from https://developer.webex.com/my-apps/dna-demo-bot
+  5) run NodeJS using command='DEBUG=sparkbot*,samples* ACCESS_TOKEN=ZWI0Y2YwYTMtMzgzYS00OTMxLWEwN2EtYjI4MmUxODAzOTQ1ZDFlOTI3MzItYThl_PF84_1eb65fdf-9643-417f-9974-ad72cae0e10f node examples/dnabot_xuda.js'
+  6) you can using /hello，/getdevicecount，/getsiteinfo,  /testmyclient command on you webex Team Bot to get the infomation from DNAC,
 
-If the code is configurable, describe it in detail, either here or in other documentation that you reference.
+Module 4:WeChat_Dev.zip :
+  1) Download and Install Wechat SDk in you develop PC
+  2) Download WeChat_Dev.zip and open with Wechat SDK
+  3) Compile Code and run
+  4) publish the App in WeChat.
 
-# Use Case Description
 
-Show users how to use the code. Be specific. Use appropriate formatting when showing code snippets or command line output.
-
-# DevNet Sandbox
-
-A great way to make your repo easy for others to use is to provide a link to a DevNet Sandbox that provides a network or other resources required to use this code. In addition to identifying an appropriate sandbox, be sure to provide instructions and any configuration necessary to run your code with the sandbox.
-
-# How to test the software
-
-Provide details on steps to test, versions of components/dependencies against which code was tested, date the code was last tested, etc. If the repo includes automated tests, detail how to run those tests. If the repo is instrumented with a continuous testing framework, that is even better.
-
-# Known issues
-
-Document any significant shortcomings with the code. If using GitHub Issues to track issues, make that known and provide any templates or conventions to be followed when opening a new issue.
-
-# Getting help
-
-Instruct users how to get help with this code; this might include links to an issues list, wiki, mailing list, etc.
-
-Example
-
-If you have questions, concerns, bug reports, etc., please create an issue against this repository.
-
-# Getting involved
-
-This section should detail why people should get involved and describe key areas you are currently focusing on; e.g., trying to get feedback on features, fixing certain bugs, building important pieces, etc. Include information on how to setup a development environment if different from general installation instructions.
-
-General instructions on how to contribute should be stated with a link to CONTRIBUTING file.
 
 # Credits and references
 
@@ -131,24 +126,4 @@ Good practices
     Add links where users can download and how to install additional soft/app/libraries that are needed to run your code. For example, installer for Python, node, etc.
     Add NOTICE file with copyright if you use GPLv3 or Apache 2.0 license (sample)
     Dockerize app or part of an app, like a server/client
-
-Bad practices
-
-    Use bad quality screenshots
-    Users need to rename some files like variables_template.py
-    Users need to include credentials in source file
-    Don’t describe in which format users need to type or paste in file API endpoint or server IP. For example, sometimes devs write in code api_endpoint = “https://" + IP +"/", such that users need to paste the IP only without a slash at the end or a protocol specification. Please clarify this information in README.
-
-
-
-
-How to Use Demo Code：
-
-1.DNAC-intergrate-Huawei5720.zip :--- This is Sample code for using DNAC southbound SDK to intergarte Huawei S5720 Switch in to DNAC platform,you must install DNAC southbound SDK tools first,then unzip file and load all file into SDK application and compile it,and install the .sdu file in to you DNAC.
-
-2.assurnace_haixin.py :--- This is a Saple code using Python,this code is get data from DNAC and can be display on Splunk,you can using follow command to run the code python3 assurnace_haixin.py -u admin -p Cisc0123 -i 172.16.63.248 -t 1 -c 1, 'admin is DNAC username,'Cisc0123' is DNAC password,'172.16.63.248' is DNAC IP address, -t is mean how many minute to get data from dnac once,'-c' is mean how many time you want to retrieve data from DNAC,if =0 mean,this will run for ever.
-
-3.dnabot_xuda.js :--- this is Demo code for using Webex Team Bot to intergrate with DNAC,you can using /hello，/getdevicecount，/getsiteinfo,  /testmyclient command on you webex Team Bot to get the infomation from DNAC,this code is using JS.Node,you also need to install ngrok and npm first.
-
-4.WeChat_Dev.zip :--- This is Demo for How intergrate DNAC request in Wechat, you should install Wechat develop Tools first and using this tool to compile the code and publish in WeChat.
 
