@@ -25,7 +25,26 @@ Other things you might include:
 ![DNAC Wechat SDK](https://github.com/daxu2/Unified-Customer-Network-Platform-Base-On-Cisco-DNA/blob/main/images/wechat_develop.png)
 
 # Use Case Description
-Describe the problem this code addresses, how your code solves the problem, challenges you had to overcome as part of the solution, and optional ideas you have in mind that could further extend your solution.
+Technology Summary :
+
+1.Unified &amp; Customer-oriented &amp; localized Enterprise  Network Management Platform Base on Cisco DNA Solution,Monitor network every where，any time,and provide automaticly report  
+2.3rd party switch integrate 
+3.Customer-oriented Protal,not only IT view,but also need OT and Management Team view  
+4.Notification and Integrate With WeChat and Webex Team,Real time notification Integrating customer workflow 
+5.Self Service Integrate With WeChat and customer mobile app,Provide more self-service  for OT within workflow ,more automatic,more flexible IT Operation 
+6.DNA Assurance Portal Localization
+
+Business Summary:
+
+1.Win &amp; Win &amp; Win:Cisco Win the Case,Partner Wim more Project,Customer IT win Trust from Management Team 
+2.This is not only an Idea,it is real case/product, Total Booking Number：1M+ US$ 
+3.Cisco Value Selling:Cross Archi Selling,From IT to OT,Focus on customer business value and solve really issue 
+4.Partner Tranformation:From product selling to solution selling,More closely with customer core business,Partner develop skill Use case description  
+
+# Topology For this Test
+
+You need to prepare 1 DNAC Server, 1 Catalyst Switch,1 Huawei 5720S Swtich,1 Server for install code and develop environment，you also need to can access internet becasue you will intergrate Webext Team and Wechat Cloud Service.
+![Test Topology](https://github.com/daxu2/Unified-Customer-Network-Platform-Base-On-Cisco-DNA/blob/main/images/Demo_Topology.jpg)
 
 # Installation
 
@@ -121,21 +140,7 @@ Bad practices
     Don’t describe in which format users need to type or paste in file API endpoint or server IP. For example, sometimes devs write in code api_endpoint = “https://" + IP +"/", such that users need to paste the IP only without a slash at the end or a protocol specification. Please clarify this information in README.
 
 
-Technology Summary :
 
-1.Unified &amp; Customer-oriented &amp; localized Enterprise  Network Management Platform Base on Cisco DNA Solution,Monitor network every where，any time,and provide automaticly report  
-2.3rd party switch integrate 
-3.Customer-oriented Protal,not only IT view,but also need OT and Management Team view  
-4.Notification and Integrate With WeChat and Webex Team,Real time notification Integrating customer workflow 
-5.Self Service Integrate With WeChat and customer mobile app,Provide more self-service  for OT within workflow ,more automatic,more flexible IT Operation 
-6.DNA Assurance Portal Localization
-
-Business Summary:
-
-1.Win &amp; Win &amp; Win:Cisco Win the Case,Partner Wim more Project,Customer IT win Trust from Management Team 
-2.This is not only an Idea,it is real case/product, Total Booking Number：1M+ US$ 
-3.Cisco Value Selling:Cross Archi Selling,From IT to OT,Focus on customer business value and solve really issue 
-4.Partner Tranformation:From product selling to solution selling,More closely with customer core business,Partner develop skill Use case description  
 
 How to Use Demo Code：
 
