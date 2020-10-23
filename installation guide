@@ -1,0 +1,50 @@
+Installation & Configuration
+his Example Code is composed with 4 moduel,every moduel is can be used independently. you can choose some module which you want to demo.
+
+Module 1:DNAC-intergrate-Huawei5720 Swtich:
+
+1)Download DNAC SDK from https://developer.cisco.com/docs/dna-center/#!downloads-and-release-notes
+
+2)Install SDK on you develop PC
+
+3)Download DNAC-intergrate-Huawei5720.zip on you develop PC and open with DNAC SDK
+
+4)Complie the code on DNAC SDK
+
+5)Deploy the SDU file to you DNAC Center
+
+Module 2:assurnace_haixin.py :
+
+    install Python3 on Application Server
+
+    Copy assurnace_haixin.py to Application Server folder
+
+    under same folder,you need to create clientdata and devicedata floder
+
+    sudo pip3 install requests
+
+5）run the code python3 assurnace_haixin.py -u admin -p Cisc0123 -i 172.16.63.248 -t 1 -c 1, 'admin is DNAC username,'Cisc0123' is DNAC password,'172.16.63.248' is DNAC IP address, -t is mean how many minute to get data from dnac once,'-c' is mean how many time you want to retrieve data from DNAC,if =0 mean,this will run for ever.
+
+Module 3:dnabot_xuda.js :
+
+1）install npm on Application Server
+
+2）npm i request on Application Server
+
+3）copy dnabot_xuda.js to Application Server folder
+
+4）create bot named "DNA Demo Bot" on https://developer.webex.com/my-apps,get token from https://developer.webex.com/my-apps/dna-demo-bot
+
+    run NodeJS using command='DEBUG=sparkbot*,samples* ACCESS_TOKEN=ZWI0Y2YwYTMtMzgzYS00OTMxLWEwN2EtYjI4MmUxODAzOTQ1ZDFlOTI3MzItYThl_PF84_1eb65fdf-9643-417f-9974-ad72cae0e10f node examples/dnabot_xuda.js'
+
+    you can using /hello，/getdevicecount，/getsiteinfo, /testmyclient command on you webex Team Bot to get the infomation from DNAC.
+
+Module 4:WeChat_Dev.zip :
+
+    Download and Install Wechat SDk in you develop PC
+
+    Download WeChat_Dev.zip and open with Wechat SDK
+
+    Compile Code and run
+
+    publish the App in WeChat.
